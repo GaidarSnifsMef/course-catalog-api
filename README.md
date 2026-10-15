@@ -20,7 +20,17 @@ pip install -r requirements.txt
 fastapi dev main.py
 ```
 
-API will be available at `http://127.0.0.1:8000` and interactive documentation at `http://127.0.0.1:8000/docs`.
+API will be available at `http://localhost:8000` and interactive documentation at `http://localhost:8000/docs`.
+
+## What changed in Lab 5
+
+The API permits browser requests only from `http://localhost:3000`. This CORS rule lets the Next.js client read API responses while other origins receive no browser permission. JSON response and request-body field names use camelCase through `CamelModel`; Python code still uses snake_case.
+
+- `POST /courses/{course_id}/like` increments the in-memory course counter and returns the updated course.
+- `POST /enrollments` accepts `{ "courseId": "web-security", "studentName": "Aigerim" }` and returns `201` with an enrollment id.
+- `GET /enrollments` returns all enrollments received since the FastAPI server last started.
+
+Likes and enrollments are deliberately in memory for this lab, so restarting the backend resets them.
 
 ## What was verified
 
