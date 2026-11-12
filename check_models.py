@@ -22,3 +22,4 @@ in_models = {
 }
 print("names only in models:", sorted(in_models - in_db) or "none")
 print("names only in database:", sorted(in_db - in_models) or "none")
+

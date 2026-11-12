@@ -69,3 +69,4 @@ class Enrollment(Base):
 
     course: Mapped["Course"] = relationship(back_populates="enrollments")
     student: Mapped["Student"] = relationship(back_populates="enrollments")
+

@@ -24,3 +24,4 @@ for title, path, body, expected in CASES:
     mark = "ok  " if ok else "FAIL"
     print(f"{mark} {title:<20} {response.status_code}  {response.text[:48]}")
 print(f"{len(CASES) - failed} of {len(CASES)} as expected")
+
