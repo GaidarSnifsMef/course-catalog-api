@@ -2,7 +2,7 @@ from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 from data import find_course, get_all_courses
-from models import Course, Enrollment, EnrollmentIn
+from schemas import Course, Enrollment, EnrollmentIn
 
 
 def pagination(page: int = 1, page_size: int = 20):
